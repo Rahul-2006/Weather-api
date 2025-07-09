@@ -1,6 +1,6 @@
 # 🌤️ Weather App - Streamlit + OpenWeatherMap
 <br>
-A simple and interactive weather web app built using **Streamlit** and **OpenWeatherMap API**. You have to enter the name of a city and get real-time weather updates, including temperature, humidity, wind speed, sunrise/sunset times, and more!! <br>
+A simple and interactive weather web app built using <strong>Streamlit</strong> and <strong>OpenWeatherMap API</strong>. You have to enter the name of a city and get real-time weather updates, including temperature, humidity, wind speed, sunrise/sunset times, and more!! <br>
 
 
 ## Features
