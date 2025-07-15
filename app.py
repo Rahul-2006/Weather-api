@@ -4,6 +4,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 import time
 import requests
+from zoneinfo import ZoneInfo
 load_dotenv()
 API_KEY = os.getenv('API_KEY')
 print("Enter the city name: ")
@@ -25,9 +26,9 @@ try:
     pressure = round((weatherdata.json()['main']['pressure'])*0.7500638)
     icon_id = weatherdata.json()['weather'][0]['icon']
     sunrise = weatherdata.json()['sys']['sunrise']
-    sunrise_time = datetime.fromtimestamp(sunrise)
+    sunrise_time = datetime.fromtimestamp(sunrise, tz=ZoneInfo("Asia/Kolkata"))
     sunset = weatherdata.json()['sys']['sunset']
-    sunset_time = datetime.fromtimestamp(sunset)
+    sunset_time = datetime.fromtimestamp(sunset, tz=ZoneInfo("Asia/Kolkata"))
     cod = weatherdata.json()['cod']
     cod =str(cod//100) + 'x'
     icon = f'https://openweathermap.org/img/wn/{icon_id}@{cod}.png'
