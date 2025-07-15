@@ -1,5 +1,3 @@
 streamlit 
-datetime
-dotenv
-time
+python-dotenv
 requests
